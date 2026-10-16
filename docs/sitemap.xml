@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lumishelf.github.io/LumiShelf/</loc>
-    <lastmod>2026-10-16</lastmod>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/01_benvenuto.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/01c_lettori.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/02_accesso.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/04_primo_caricamento.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/06_home_con_dati.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/07_libreria.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/route_search.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/route_detail.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/08b_azioni_file.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/20_modifica_metadati.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/20b_cambia_copertina.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/09_pdf_reale_pagina6.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/09c_pdf_indice.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/10_epub_reale.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/11_epub_aspetto.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/12_manga_reale.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/16_manga_pagine.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/route_series.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/route_manga.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/route_manga_serie.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/route_manga_serie_info.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/route_settings.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/22_informazioni_github.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/22b_aggiornamento_disponibile.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/route_advanced.webp</image:loc></image:image>
-    <image:image><image:loc>https://lumishelf.github.io/LumiShelf/img/route_appearance_light.webp</image:loc></image:image>
+    <lastmod>2026-10-17</lastmod>
   </url>
 </urlset>
