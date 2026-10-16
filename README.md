@@ -165,7 +165,7 @@ Verifica facoltativa del file:
 
 | | |
 | --- | --- |
-| Versione | 1.19.3 (codice 88), pubblicata il 17 ottobre 2026 |
+| Versione | 1.19.3 (codice 88), pubblicata il 16 ottobre 2026 |
 | Android | da 8.0 (API 26), compilata per Android 15 (API 35) |
 | Lingua | Italiano |
 | Formati | PDF, EPUB, CBZ, CBR, CB7, ZIP, RAR, 7Z, JPG, PNG, WebP, BMP, DOCX, XLS, XLSX, XLSM, XLTX, XLTM, TXT, LOG, XML, JSON, CSV, Markdown, HTML, YAML, INI, Properties, DICOM; DOC, ODT e RTF con un'app esterna |
@@ -175,7 +175,7 @@ Verifica facoltativa del file:
 
 ## Versioni
 
-### 1.19.3 · 17 ottobre 2026
+### 1.19.3 · 16 ottobre 2026
 
 **Pagina del progetto e aggiornamenti**
 

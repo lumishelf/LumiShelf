@@ -1,6 +1,6 @@
 # Storico delle versioni pubblicate (genera dati/versioni.json). La prima è la più recente.
 V = [
- dict(versione="1.19.3", codice=88, data="2026-10-17", titolo="Pagina del progetto e aggiornamenti", punti=[
+ dict(versione="1.19.3", codice=88, data="2026-10-16", titolo="Pagina del progetto e aggiornamenti", punti=[
    "Impostazioni › Informazioni › LumiShelf su GitHub: apre la pagina del progetto.",
    "Controlla aggiornamenti: confronta la versione installata con l'ultima pubblicata su GitHub e porta al download.",
    "«Avvisami delle nuove versioni»: controllo all'apertura, al massimo una volta al giorno. Spento di base.",
