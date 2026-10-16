@@ -1,0 +1,577 @@
+{
+ "stati": [
+  {
+   "id": "telefono",
+   "nome": "Provata sul telefono",
+   "spiegazione": "Funziona nell'uso reale su Samsung Galaxy Note 10 Plus (riscontro sulla 1.18.6)."
+  },
+  {
+   "id": "emulatore",
+   "nome": "Collaudata su emulatore",
+   "spiegazione": "Test automatici superati su due emulatori (tipo Note 10 Plus e telefono compatto); manca la prova sul telefono."
+  },
+  {
+   "id": "ereditata",
+   "nome": "Presente, da ricollaudare",
+   "spiegazione": "Funzione già presente nelle versioni precedenti e mantenuta; non ancora ricollaudata nelle versioni recenti."
+  },
+  {
+   "id": "limiti",
+   "nome": "Disponibile con limiti",
+   "spiegazione": "Utilizzabile, con limiti scritti nella descrizione."
+  },
+  {
+   "id": "programma",
+   "nome": "In programma",
+   "spiegazione": "Prevista nei prossimi lavori."
+  },
+  {
+   "id": "rinviata",
+   "nome": "Rinviata",
+   "spiegazione": "Rimandata per scelta."
+  },
+  {
+   "id": "decidere",
+   "nome": "Da decidere",
+   "spiegazione": "Idea possibile, non ancora approvata."
+  }
+ ],
+ "funzioni": [
+  {
+   "area": "Avvio e accessi",
+   "nome": "Benvenuto e schede informative",
+   "descrizione": "Benvenuto illustrato e cinque schede da toccare: Libreria, Lettori, Editor, Ricerca e Smart Library, Backup e privacy. Si possono saltare.",
+   "dal": "1.18.6",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Avvio e accessi",
+   "nome": "Scelta dell'accesso ai file",
+   "descrizione": "Cartelle scelte con Android (SAF) oppure scansione totale della memoria, con le garanzie sulla privacy spiegate prima di scegliere.",
+   "dal": "1.18.5",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Avvio e accessi",
+   "nome": "Primo caricamento della libreria",
+   "descrizione": "Scansione con contatori reali (documenti trovati, file esaminati, cartelle), interruzione e riprova; la Home si apre a caricamento finito.",
+   "dal": "1.18.5",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Avvio e accessi",
+   "nome": "Riapertura rapida",
+   "descrizione": "Dopo la configurazione l'app apre direttamente la Home, senza introduzione; con cataloghi molto grandi compare un caricamento neutro.",
+   "dal": "1.18.5",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Avvio e accessi",
+   "nome": "Rivedi l'introduzione e Ripeti configurazione",
+   "descrizione": "Da Impostazioni › Informazioni, senza perdere catalogo, progressi e raccolte.",
+   "dal": "1.18.5",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Home e Libreria",
+   "nome": "Home",
+   "descrizione": "Continua a leggere, ultimi aggiunti, raccolte in evidenza, preferiti e statistiche della libreria.",
+   "dal": "1.18.6",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Home e Libreria",
+   "nome": "Libreria a griglia o elenco",
+   "descrizione": "Copertine, titolo, autore, formato e avanzamento; filtri per formato, preferiti, stato, segnalibri e Manga; ordinamento.",
+   "dal": "1.18.6",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Home e Libreria",
+   "nome": "Selezione multipla",
+   "descrizione": "Preferiti, aggiungi a raccolta o ai manga, stato di lettura, nascondi, rimuovi dalla libreria per più file insieme.",
+   "dal": "1.18.6",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Home e Libreria",
+   "nome": "Libreria su schermo largo",
+   "descrizione": "Da 720 dp (tablet, telefono in orizzontale) catalogo e dettaglio affiancati, con scorrimenti indipendenti.",
+   "dal": "1.19.0",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Home e Libreria",
+   "nome": "Copertine dai file",
+   "descrizione": "Prima pagina dei PDF, prima immagine di CBZ/ZIP, copertina interna degli EPUB, immagini; create in sottofondo. Si può spegnere.",
+   "dal": "1.19.1",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Home e Libreria",
+   "nome": "Aggiungi file e cartelle",
+   "descrizione": "Un pannello unico: file singoli o multipli, cartelle, provider cloud installati sul telefono, ricezione da un altro dispositivo.",
+   "dal": "1.18.6",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Home e Libreria",
+   "nome": "Foto come PDF",
+   "descrizione": "Scatta una foto con la fotocamera del telefono e la salva come PDF di una pagina nella libreria.",
+   "dal": "1.18.2",
+   "stato": "ereditata",
+   "nota": "Da provare sul telefono."
+  },
+  {
+   "area": "Cerca",
+   "nome": "Ricerca nella libreria",
+   "descrizione": "Titolo, autore, tag, categoria e nome del file; schede per formato con i conteggi; ricerche recenti. Il campo resta fermo mentre i risultati cambiano.",
+   "dal": "1.19.0",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Cerca",
+   "nome": "Filtri avanzati e ordinamento",
+   "descrizione": "Tipo, data, categoria, autore, dimensione e stato nella pagina; ordine per pertinenza, titolo, aggiunti o letti di recente.",
+   "dal": "1.19.0",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Documento",
+   "nome": "Azioni del file",
+   "descrizione": "Scheda dal basso con gruppi: Leggi, Organizza, Modifica, Condividi, Gestione file. Il tocco apre le azioni, «Apri» avvia la lettura.",
+   "dal": "1.18.6",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Documento",
+   "nome": "Dettaglio del documento",
+   "descrizione": "Copertina grande, dati del file, avanzamento, descrizione, informazioni e «Potrebbero interessarti» (serie, autore, categoria, tag).",
+   "dal": "1.19.0",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Documento",
+   "nome": "Modifica metadati",
+   "descrizione": "Titolo, autore, categoria, tag a pulsanti, lingua, data con calendario, valutazione; «Compila dal file» per EPUB e PDF.",
+   "dal": "1.19.1",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Documento",
+   "nome": "Cambia copertina",
+   "descrizione": "Dal documento, sei grafiche con titolo e autore, un'immagine dalla galleria, ripristino.",
+   "dal": "1.19.1",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Documento",
+   "nome": "Rinomina",
+   "descrizione": "Cambia il nome del file nella sua cartella: progressi, segnalibri, raccolte, copertina e metadati restano legati al documento.",
+   "dal": "1.19.2",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Documento",
+   "nome": "Condividi ed esporta una copia",
+   "descrizione": "Condivisione con un link temporaneo in sola lettura, invio a un dispositivo sulla rete locale, copia in una cartella a scelta.",
+   "dal": "1.19.1",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Documento",
+   "nome": "Nascondi, rimuovi, elimina",
+   "descrizione": "Tre azioni distinte con la conseguenza scritta accanto; l'eliminazione del file chiede conferma.",
+   "dal": "1.18.6",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Documento",
+   "nome": "Scegli il lettore",
+   "descrizione": "Per i formati che più lettori sanno aprire (per esempio un PDF come manga), la scelta resta per quel documento.",
+   "dal": "1.18.5",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Documento",
+   "nome": "Sposta in…",
+   "descrizione": "Spostare un file in un'altra cartella conservando i suoi dati.",
+   "dal": "",
+   "stato": "programma",
+   "nota": "Serve la scelta della cartella di destinazione e la copia tra provider diversi."
+  },
+  {
+   "area": "Raccolte e manga",
+   "nome": "Raccolte e serie",
+   "descrizione": "Raccolte manuali e serie automatiche, con descrizione, icona, colore e scelta di mostrarle in Home.",
+   "dal": "1.18.6",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Raccolte e manga",
+   "nome": "Sezione Manga",
+   "descrizione": "Riempita a mano dalla libreria o dal telefono, con serie create da te e riordino dei volumi. Nessun raggruppamento automatico per nome.",
+   "dal": "1.18.8",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Raccolte e manga",
+   "nome": "Pagina della serie",
+   "descrizione": "Copertina, preferito, autore, generi, descrizione, volumi, pagine e valutazione; «Continua» dal volume giusto; schede Volumi, Informazioni e Correlati; Modifica la serie.",
+   "dal": "1.19.2",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Raccolte e manga",
+   "nome": "Raccolte intelligenti a regole",
+   "descrizione": "Raccolte che si riempiono da sole secondo regole (autore, tag, stato…).",
+   "dal": "",
+   "stato": "decidere",
+   "nota": ""
+  },
+  {
+   "area": "Lettore PDF",
+   "nome": "Pagina e navigazione",
+   "descrizione": "Pagina come un foglio, cursore, salto di pagina, miniature; avanti e indietro veloci senza pagine sbagliate.",
+   "dal": "1.18.9",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Lettore PDF",
+   "nome": "Indice, segnalibri e ricerca",
+   "descrizione": "Sommario interno del PDF, più segnalibri per documento, ricerca con l'elenco dei risultati e l'estratto.",
+   "dal": "1.18.9",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Lettore PDF",
+   "nome": "Modalità di lettura",
+   "descrizione": "Pagina singola, scorrimento continuo o doppia pagina; pagina scura per la sera; ritaglio dei margini; zoom.",
+   "dal": "1.18.9",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Lettore EPUB",
+   "nome": "Impaginazione vera",
+   "descrizione": "Il libro viene impaginato secondo schermo e testo; la posizione resta cambiando carattere o margini; capitoli dall'indice del libro.",
+   "dal": "1.18.9",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Lettore EPUB",
+   "nome": "Aspetto del testo",
+   "descrizione": "Temi Chiaro, Seppia, Notte, Amoled; dimensione, carattere (anche TTF/OTF dal telefono), interlinea, margini, sillabazione, capolettera.",
+   "dal": "1.18.9",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Lettore EPUB",
+   "nome": "Ricerca e segnalibri",
+   "descrizione": "Risultati con capitolo ed estratto, più segnalibri con l'inizio del testo della pagina.",
+   "dal": "1.18.9",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Lettore EPUB",
+   "nome": "Immagini e stili dei libri",
+   "descrizione": "Le immagini interne e il CSS completo dei libri non vengono ancora riprodotti: il testo mantiene solo gli stili di base.",
+   "dal": "1.18.9",
+   "stato": "limiti",
+   "nota": ""
+  },
+  {
+   "area": "Lettore manga e fumetti",
+   "nome": "Formati",
+   "descrizione": "CBZ/ZIP, CBR/RAR, CB7/7Z, PDF letti come manga e immagini; ordine naturale delle pagine; capitoli dalle cartelle dell'archivio.",
+   "dal": "1.18.5",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Lettore manga e fumetti",
+   "nome": "Barra del lettore",
+   "descrizione": "Cursore e griglia di tutte le pagine; Capitoli · Luminosità · Modo · Zoom · Altro; segnalibro sulla pagina.",
+   "dal": "1.18.7",
+   "stato": "emulatore",
+   "nota": "La 1.18.7 è stata provata sul telefono; le richieste emerse sono nella 1.18.8."
+  },
+  {
+   "area": "Lettore manga e fumetti",
+   "nome": "Doppia pagina",
+   "descrizione": "Sempre affiancata, anche in verticale; copertina da sola; tavole già larghe intere.",
+   "dal": "1.18.8",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Lettore manga e fumetti",
+   "nome": "Zoom e gesti",
+   "descrizione": "Pizzico centrato tra le dita, spostamento 1:1 con inerzia, doppio tocco sulla pagina toccata, sfoglio tirando oltre il bordo.",
+   "dal": "1.18.8",
+   "stato": "emulatore",
+   "nota": "I gesti vanno provati a mano sul telefono."
+  },
+  {
+   "area": "Lettore manga e fumetti",
+   "nome": "Modalità e direzione",
+   "descrizione": "Verticale, orizzontale, Webtoon continuo; sinistra → destra di base, scelta per formato e per singolo file; volume successivo a fine lettura.",
+   "dal": "1.18.7",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Lettore manga e fumetti",
+   "nome": "Luce, sfondo e tasti volume",
+   "descrizione": "Luminosità e luce calda solo durante la lettura, sfondo nero, grafite, bianco o seppia, sfoglio con i tasti del volume.",
+   "dal": "1.18.7",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Lettore manga e fumetti",
+   "nome": "Ritaglio, contrasto e grigi",
+   "descrizione": "Ritaglio dei bordi bianchi uniformi, contrasto e scala di grigi; non riconosce le singole vignette.",
+   "dal": "1.18.5",
+   "stato": "limiti",
+   "nota": ""
+  },
+  {
+   "area": "Lettore manga e fumetti",
+   "nome": "Cartelle di sole immagini come volumi",
+   "descrizione": "Per scelta si consiglia un file CBZ, ZIP, RAR o PDF per volume.",
+   "dal": "",
+   "stato": "decidere",
+   "nota": ""
+  },
+  {
+   "area": "Editor",
+   "nome": "Editor PDF",
+   "descrizione": "Annotazioni, penna, evidenziatore, testo, firma grafica, immagini; pagine (ruota, duplica, elimina, sposta, estrai, unisci, dividi, ritaglia); moduli; OCR offline; firma con certificato P12/PFX; stampa.",
+   "dal": "1.18.2",
+   "stato": "ereditata",
+   "nota": "Funziona come nella 1.18.2; il rifacimento dell'interfaccia è in programma."
+  },
+  {
+   "area": "Editor",
+   "nome": "Fogli di calcolo",
+   "descrizione": "XLS, XLSX, XLSM, XLTX, XLTM: formule, fogli, formati, bordi, celle unite, filtri, ordinamento, blocco riquadri, protezione, convalida, commenti, grafici supportati. Le macro VBA si conservano, non si eseguono.",
+   "dal": "1.18.2",
+   "stato": "ereditata",
+   "nota": "Cartelle di lavoro molto grandi e parti avanzate di Excel sono supportate solo in parte."
+  },
+  {
+   "area": "Editor",
+   "nome": "Documenti DOCX",
+   "descrizione": "Editor di base con formattazione, copia, PDF e stampa; i documenti complessi sono protetti dalle sovrascritture.",
+   "dal": "1.18.2",
+   "stato": "limiti",
+   "nota": ""
+  },
+  {
+   "area": "Editor",
+   "nome": "Testo e dati",
+   "descrizione": "TXT, LOG, XML, JSON, CSV, Markdown, HTML, YAML, INI, Properties: modifica, ricerca e sostituzione, vai alla riga, codifica e terminatori conservati.",
+   "dal": "1.18.2",
+   "stato": "ereditata",
+   "nota": ""
+  },
+  {
+   "area": "Editor",
+   "nome": "Salvataggio sicuro e bozze",
+   "descrizione": "Salva, salva una copia o esporta; conflitti se il file cambia altrove; bozze recuperabili dopo una chiusura improvvisa.",
+   "dal": "1.18.2",
+   "stato": "ereditata",
+   "nota": ""
+  },
+  {
+   "area": "Editor",
+   "nome": "DOC, ODT, RTF",
+   "descrizione": "Si aprono con un'app esterna installata sul telefono.",
+   "dal": "1.18.2",
+   "stato": "limiti",
+   "nota": ""
+  },
+  {
+   "area": "Editor",
+   "nome": "Nuova interfaccia degli editor",
+   "descrizione": "Comandi contestuali, annulla/ripristina, ricerca e salvataggi uniformi in tutti gli editor; poi editor per EPUB, immagini e archivi.",
+   "dal": "",
+   "stato": "programma",
+   "nota": ""
+  },
+  {
+   "area": "Strumenti",
+   "nome": "Smart Library",
+   "descrizione": "Analisi su richiesta di copertine e metadati mancanti, duplicati verificati sull'intero contenuto, raccolte per categoria.",
+   "dal": "1.18.5",
+   "stato": "limiti",
+   "nota": "Assistente locale: niente ricerca di dati online. La rifinitura grafica è in programma."
+  },
+  {
+   "area": "Strumenti",
+   "nome": "DICOM",
+   "descrizione": "Esami e serie, frame, finestra e inversione, esportazione PNG, informazioni, modalità privacy, report anonimo, apertura esterna. Uso non diagnostico.",
+   "dal": "1.18.5",
+   "stato": "limiti",
+   "nota": "Alcune compressioni richiedono un visualizzatore esterno."
+  },
+  {
+   "area": "Strumenti",
+   "nome": "Sincronizza dispositivi",
+   "descrizione": "Rete locale tra telefoni Android e client Windows: abbinamento con codice di sei cifre, trasferimenti cifrati, confronto della libreria e dei progressi.",
+   "dal": "1.18.2",
+   "stato": "ereditata",
+   "nota": "Da collaudare tra due dispositivi reali."
+  },
+  {
+   "area": "Strumenti",
+   "nome": "Diagnostica e memoria",
+   "descrizione": "Spazio usato da cache e copertine, svuotamento, report tecnici da condividere.",
+   "dal": "1.18.5",
+   "stato": "ereditata",
+   "nota": ""
+  },
+  {
+   "area": "Impostazioni e dati",
+   "nome": "Aspetto",
+   "descrizione": "Tema chiaro, scuro, Amoled o di sistema; accento; dimensione e angoli delle copertine; etichette, avanzamento, animazioni, sfondo.",
+   "dal": "1.18.6",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Impostazioni e dati",
+   "nome": "Preferenze di lettura",
+   "descrizione": "Valori predefiniti per PDF, EPUB e manga; orientamento; schermo acceso. Nel lettore resta solo il pannello rapido.",
+   "dal": "1.18.6",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Impostazioni e dati",
+   "nome": "Libreria e cartelle",
+   "descrizione": "Metodo di accesso, cartelle autorizzate, ultima scansione e aggiornamento della libreria nello stesso posto.",
+   "dal": "1.18.6",
+   "stato": "telefono",
+   "nota": ""
+  },
+  {
+   "area": "Impostazioni e dati",
+   "nome": "Backup e ripristino",
+   "descrizione": "File JSON con indice, progressi, segnalibri, stato, raccolte, serie manga, metadati e preferenze.",
+   "dal": "1.18.5",
+   "stato": "emulatore",
+   "nota": "Non contiene i documenti, le autorizzazioni delle cartelle e le copertine personalizzate."
+  },
+  {
+   "area": "Impostazioni e dati",
+   "nome": "Pagina del progetto e aggiornamenti",
+   "descrizione": "Impostazioni › Informazioni: apre questa pagina e controlla, quando lo chiedi, se su GitHub c'è una versione più recente.",
+   "dal": "1.19.3",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Impostazioni e dati",
+   "nome": "Telefoni piccoli e testo grande",
+   "descrizione": "Interfaccia collaudata da 360 dp di larghezza, con testo al 150% e in orizzontale.",
+   "dal": "1.18.6",
+   "stato": "emulatore",
+   "nota": ""
+  },
+  {
+   "area": "Più avanti",
+   "nome": "Rifinitura di Smart Library, DICOM e rete locale",
+   "descrizione": "Schermate allineate al resto dell'app.",
+   "dal": "",
+   "stato": "programma",
+   "nota": ""
+  },
+  {
+   "area": "Più avanti",
+   "nome": "Schermi larghi negli editor e negli strumenti",
+   "descrizione": "Pannelli affiancati come nella Libreria.",
+   "dal": "",
+   "stato": "programma",
+   "nota": ""
+  },
+  {
+   "area": "Più avanti",
+   "nome": "Misure di velocità sul telefono e pulizia del codice",
+   "descrizione": "Avvio, cataloghi grandi, PDF pesanti, memoria; poi riordino del codice.",
+   "dal": "",
+   "stato": "programma",
+   "nota": ""
+  },
+  {
+   "area": "Più avanti",
+   "nome": "Gattino animato nel caricamento",
+   "descrizione": "Un'animazione durante il primo caricamento dei file.",
+   "dal": "",
+   "stato": "rinviata",
+   "nota": ""
+  },
+  {
+   "area": "Più avanti",
+   "nome": "Account e sincronizzazione cloud",
+   "descrizione": "Oggi tutto resta sul telefono; i servizi cloud si raggiungono attraverso Android.",
+   "dal": "",
+   "stato": "decidere",
+   "nota": ""
+  },
+  {
+   "area": "Più avanti",
+   "nome": "Metadati e copertine da Internet",
+   "descrizione": "Ricerca online di titoli, autori, ISBN e copertine.",
+   "dal": "",
+   "stato": "decidere",
+   "nota": ""
+  },
+  {
+   "area": "Più avanti",
+   "nome": "PIN, impronta e raccolte protette",
+   "descrizione": "Protezione dell'app o di singole raccolte.",
+   "dal": "",
+   "stato": "decidere",
+   "nota": ""
+  },
+  {
+   "area": "Più avanti",
+   "nome": "Backup protetto da password",
+   "descrizione": "Backup cifrato.",
+   "dal": "",
+   "stato": "decidere",
+   "nota": ""
+  }
+ ]
+}

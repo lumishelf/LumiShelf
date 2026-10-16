@@ -1,0 +1,99 @@
+[
+ {
+  "versione": "1.19.3",
+  "codice": 88,
+  "data": "2026-10-17",
+  "titolo": "Pagina del progetto e aggiornamenti",
+  "punti": [
+   "Impostazioni › Informazioni › LumiShelf su GitHub: apre la pagina del progetto.",
+   "Controlla aggiornamenti: confronta la versione installata con l'ultima pubblicata su GitHub e porta al download.",
+   "«Avvisami delle nuove versioni»: controllo all'apertura, al massimo una volta al giorno. Spento di base.",
+   "Privacy aggiornata: l'app usa Internet solo quando lo chiedi tu."
+  ]
+ },
+ {
+  "versione": "1.19.2",
+  "codice": 87,
+  "data": "2026-10-16",
+  "titolo": "Pagina della serie manga e Rinomina",
+  "punti": [
+   "Pagina della serie con copertina, preferito, autore, generi, descrizione, volumi, pagine e valutazione.",
+   "Continua dal volume giusto; schede Volumi, Informazioni e Correlati; Modifica la serie.",
+   "Rinomina il file: progressi, segnalibri, raccolte, copertina e metadati restano."
+  ]
+ },
+ {
+  "versione": "1.19.1",
+  "codice": 86,
+  "data": "2026-10-16",
+  "titolo": "Copertine dai file e metadati",
+  "punti": [
+   "Copertine vere create in sottofondo da PDF, CBZ/ZIP, EPUB e immagini.",
+   "Modifica metadati con «Compila dal file», tag, lingua, data e stelle.",
+   "Cambia copertina, Aggiungi tag, Esporta una copia."
+  ]
+ },
+ {
+  "versione": "1.19.0",
+  "codice": 85,
+  "data": "2026-10-16",
+  "titolo": "Ricerca e dettaglio del documento",
+  "punti": [
+   "Cerca con schede per formato, ricerche recenti, filtri avanzati e ordinamento.",
+   "Dettaglio del documento con copertina grande, avanzamento e «Potrebbero interessarti».",
+   "Titoli puliti dai nomi dei file."
+  ]
+ },
+ {
+  "versione": "1.18.9",
+  "codice": 84,
+  "data": "2026-10-16",
+  "titolo": "Lettori PDF ed EPUB",
+  "punti": [
+   "EPUB impaginato davvero, capitoli dall'indice, temi, caratteri anche importati.",
+   "PDF con Indice, segnalibri, ricerca, scorrimento continuo e pagina scura.",
+   "Più segnalibri per documento e risultati di ricerca con estratto."
+  ]
+ },
+ {
+  "versione": "1.18.8",
+  "codice": 83,
+  "data": "2026-10-13",
+  "titolo": "Manga scelti a mano, zoom e doppia pagina",
+  "punti": [
+   "Sezione Manga riempita a mano, serie create da te.",
+   "Pizzico, spostamento con inerzia, doppio tocco sulla pagina toccata.",
+   "Doppia pagina sempre affiancata; lettura da sinistra a destra di base."
+  ]
+ },
+ {
+  "versione": "1.18.7",
+  "codice": 82,
+  "data": "2026-10-12",
+  "titolo": "Lettore manga",
+  "punti": [
+   "Barra Capitoli · Luminosità · Modo · Zoom · Altro, griglia delle pagine.",
+   "Webtoon continuo, direzione per formato e per file, volume successivo."
+  ]
+ },
+ {
+  "versione": "1.18.6",
+  "codice": 81,
+  "data": "2026-10-12",
+  "titolo": "Nuovo aspetto e funzioni in ordine",
+  "punti": [
+   "Avvio con benvenuto, cinque schede informative e configurazione in tre passi.",
+   "Home, Libreria, Raccolte e Azioni del file ridisegnate.",
+   "Ogni funzione in un solo posto: Impostazioni, Avanzate, Aggiungi."
+  ]
+ },
+ {
+  "versione": "1.18.5",
+  "codice": 80,
+  "data": "2026-10-12",
+  "titolo": "Base di partenza",
+  "punti": [
+   "Scelta tra cartelle selezionate e scansione totale, primo caricamento prima della Home."
+  ]
+ }
+]
