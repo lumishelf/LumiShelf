@@ -88,7 +88,7 @@ def pagina(app, cat, versioni):
     galleria = []
     for titolo, items in GRUPPI:
         figs = "".join(
-            f'<figure><img src="img/{n}.webp" alt="{e(c)}" width="540" height="1140" loading="lazy" decoding="async"><figcaption>{e(c)}</figcaption></figure>'
+            f'<figure><img src="img/{n}.webp" alt="LumiShelf, schermata: {e(c)}" width="540" height="1140" loading="lazy" decoding="async"><figcaption>{e(c)}</figcaption></figure>'
             for n, c in items if n in imgs)
         if figs:
             galleria.append(f'<div class="gal"><h3>{e(titolo)}</h3><div class="striscia" tabindex="0" aria-label="{e(titolo)}: scorri per vedere tutte le schermate">{figs}</div></div>')
@@ -110,6 +110,9 @@ def pagina(app, cat, versioni):
                     f'{e(col["android_note"])} test Android superati su un emulatore con lo schermo del Note 10 Plus e {e(col["android_compatto"])} su un telefono compatto da 360 dp. '
                     f'L’APK pubblicato è quello collaudato.</p>')
 
+    descr = (f"App Android gratuita per leggere e organizzare PDF, libri EPUB, manga e fumetti (CBZ, CBR) e documenti Office. "
+             f"Senza account: i file restano sul telefono. Scarica l’APK {app['versione']}.")
+    verifica = f'<meta name="google-site-verification" content="{e(app["google_verifica"])}">\n' if app.get("google_verifica") else ""
     sost = {
         "VERSIONE": e(app["versione"]), "CODICE": str(app["codice"]), "DATA": data_lunga(app["data"]), "DATA_ISO": app["data"],
         "APK_URL": apk_url, "APK_MB": mb(app["apk_bytes"]) or "circa 68 MB", "APK_NOME": e(app["apk_nome"]),
@@ -120,12 +123,71 @@ def pagina(app, cat, versioni):
         "PAGINA": app["pagina"], "TOT": str(tot), "TELEFONO_N": str(conta["telefono"]), "EMULATORE_N": str(conta["emulatore"]),
         "BARRA": barra, "LEGENDA": legenda, "OPZIONI": opzioni, "GRUPPI": "".join(gruppi), "GALLERIA": "".join(galleria),
         "EROE": eroe, "VERSIONI": "".join(vers), "COLLAUDO": collaudo,
+        "DESCRIZIONE": e(descr), "VERIFICA": verifica, "JSONLD": jsonld(app, funzioni, descr, apk_url),
     }
     t = (ROOT / "strumenti" / "modello.html").read_text(encoding="utf-8")
     for k, v in sost.items():
         t = t.replace("{{" + k + "}}", v)
     assert "{{" not in t, t[t.index("{{"):t.index("{{") + 40]
     return t
+
+
+def jsonld(app, funzioni, descr, apk_url):
+    pagina = app["pagina"]
+    dati = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "LumiShelf",
+        "description": descr,
+        "url": pagina,
+        "image": pagina + "img/anteprima.png",
+        "screenshot": [pagina + f"img/{n}.webp" for n in EROE],
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": f"Android {app['min_android']} o successivo",
+        "softwareVersion": app["versione"],
+        "datePublished": app["data"],
+        "downloadUrl": apk_url,
+        "fileSize": mb(app["apk_bytes"]),
+        "inLanguage": "it",
+        "isAccessibleForFree": True,
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+        "featureList": [f["nome"] for f in funzioni if f["stato"] in ("telefono", "emulatore")],
+        "author": {"@type": "Organization", "name": "LumiShelf", "url": f"https://github.com/{app['repo']}"},
+    }
+    return json.dumps(dati, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+
+
+def sitemap(app):
+    from schermate import GRUPPI as G
+    imgs = [n for _, items in G for n, _ in items]
+    righe = "".join(f"\n    <image:image><image:loc>{app['pagina']}img/{n}.webp</image:loc></image:image>" for n in imgs if (ROOT / "docs" / "img" / f"{n}.webp").is_file())
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'
+            f'  <url>\n    <loc>{app["pagina"]}</loc>\n    <lastmod>{app["data"]}</lastmod>{righe}\n  </url>\n</urlset>\n')
+
+
+def radice(app):
+    """Sito lumishelf.github.io: rinvio alla pagina, robots.txt, 404, chiave IndexNow, favicon (da risorse.py)."""
+    d = ROOT / "radice"; d.mkdir(exist_ok=True)
+    p = app["pagina"]
+    verifica = f'<meta name="google-site-verification" content="{e(app["google_verifica"])}">\n' if app.get("google_verifica") else ""
+    testa = ('<!doctype html>\n<html lang="it">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+             '{titolo}<link rel="icon" href="/favicon.ico" sizes="48x48">\n<link rel="icon" href="/icona-192.png" type="image/png" sizes="192x192">\n'
+             '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n<meta name="theme-color" content="#070E1C">\n' + verifica)
+    stile = ('<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#070E1C;color:#F3F4F7;'
+             'font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:24px;text-align:center}a{color:#E8B86D}</style>\n')
+    (d / "index.html").write_text(
+        testa.format(titolo="<title>LumiShelf – lettore PDF, EPUB e manga per Android</title>\n"
+                     '<meta name="description" content="LumiShelf, app Android gratuita per leggere e organizzare PDF, EPUB, manga e documenti.">\n'
+                     f'<link rel="canonical" href="{p}">\n<meta http-equiv="refresh" content="0; url={p}">\n')
+        + stile + f'</head>\n<body>\n<p>La pagina di LumiShelf è <a href="{p}">{p}</a></p>\n</body>\n</html>\n', encoding="utf-8")
+    (d / "404.html").write_text(
+        testa.format(titolo='<title>Pagina non trovata · LumiShelf</title>\n<meta name="robots" content="noindex">\n')
+        + stile + f'</head>\n<body>\n<p>Questa pagina non esiste. LumiShelf è qui: <a href="{p}">{p}</a></p>\n</body>\n</html>\n', encoding="utf-8")
+    (d / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {p}sitemap.xml\n", encoding="utf-8")
+    (d / f"{app['indexnow_key']}.txt").write_text(app["indexnow_key"], encoding="utf-8")
+    (d / ".nojekyll").write_text("", encoding="utf-8")
+    (d / "README.md").write_text(f"# lumishelf.github.io\n\nRinvio alla pagina di LumiShelf: {p}\n", encoding="utf-8")
 
 
 def readme(app, cat, versioni):
@@ -136,7 +198,7 @@ def readme(app, cat, versioni):
     tag = f"v{app['versione']}"
     apk_url = f"{repo}/releases/download/{tag}/{app['apk_nome']}"
     col = app["collaudo"]
-    r = [f"# LumiShelf", "",
+    r = [f"# LumiShelf", "", f"[![LumiShelf: lettore PDF, EPUB e manga per Android]({'docs/img/anteprima.png'})]({app['pagina']})", "",
          "Libreria e lettore di documenti per Android: PDF, EPUB, manga e fumetti, documenti Office e testo, organizzati in un unico posto. Nessun account: i file restano sul telefono.", "",
          f"**[Scarica la {app['versione']}]({apk_url})** (APK, {mb(app['apk_bytes']) or 'circa 68 MB'}, Android {app['min_android']} o successivo) · [Pagina del progetto]({app['pagina']}) · [Tutte le versioni]({repo}/releases)", "",
          "## Stato delle funzioni", "",
@@ -196,6 +258,8 @@ if __name__ == "__main__":
     (ROOT / "docs").mkdir(exist_ok=True)
     (ROOT / "docs" / "index.html").write_text(pagina(app, cat, versioni), encoding="utf-8")
     (ROOT / "docs" / ".nojekyll").write_text("", encoding="utf-8")
+    (ROOT / "docs" / "sitemap.xml").write_text(sitemap(app), encoding="utf-8")
+    radice(app)
     (ROOT / "README.md").write_text(readme(app, cat, versioni), encoding="utf-8")
     (ROOT / "dati" / "note_versione.md").write_text(note_versione(app, versioni), encoding="utf-8")
     print("pagina, README e note generati")

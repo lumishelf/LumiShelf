@@ -1,5 +1,7 @@
 # LumiShelf
 
+[![LumiShelf: lettore PDF, EPUB e manga per Android](docs/img/anteprima.png)](https://lumishelf.github.io/LumiShelf/)
+
 Libreria e lettore di documenti per Android: PDF, EPUB, manga e fumetti, documenti Office e testo, organizzati in un unico posto. Nessun account: i file restano sul telefono.
 
 **[Scarica la 1.19.3](https://github.com/lumishelf/LumiShelf/releases/download/v1.19.3/LumiShelf_1.19.3.apk)** (APK, 68 MB, Android 8.0 o successivo) · [Pagina del progetto](https://lumishelf.github.io/LumiShelf/) · [Tutte le versioni](https://github.com/lumishelf/LumiShelf/releases)
